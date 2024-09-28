@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #68aadb; /* Background similar to image */
+    margin: 0;
+}
+
+.keyboard-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 5px;
+    background-color: #0e0e0e; /* Dark background for the keyboard */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.key {
+    background-color: #1a1a1a;
+    color: #00ffff;
+    text-align: center;
+    line-height: 3;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.space {
+    grid-column: span 6; /* Span the space bar over multiple columns */
+}
+
+.key:nth-child(12), .key:nth-child(24), .key:nth-child(35), .key:nth-child(45) {
+    grid-column: span 2; /* Make special keys wider */
+}
+
+.key:nth-child(47) {
+    grid-column: span 6; /* Wide space bar */
+}
